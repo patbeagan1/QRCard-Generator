@@ -14,11 +14,14 @@ You can run the script as `main.py <csv file>`. If you just want to quickly try 
 
 ### Formatting
 
-The CSV file should have 2 columns - they do not need to be titled.
+The CSV file should have 2 columns. They do not need to be titled.
+
+- The first row is for the image. 
+- The second row is for the url. 
 
 Each row should look like this. Make sure that there are no empty rows
 ```csv
-example.com, example.com/example.png
+example.com/example.png, example.com
 ```
 
 ### Results
