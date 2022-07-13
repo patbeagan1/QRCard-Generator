@@ -30,7 +30,7 @@ def create_qr_codes(items):
 def write_to_file(items):
     with open(in_build_dir("index.html"), "w") as f:
         f.write("<html>")
-        f.write("<body class=\"flex-container\">")
+        f.write("<body class=\"masonry\">")
         write_css(f)
         write_single_item(f, items)
         f.write("</body>")
@@ -48,20 +48,26 @@ img.qr {
     height: 150px;     
     width: 150px;     
 }
-.flex-container {
-    display: inline-flex;
+.masonry {
+    display: inline-block;
     flex-wrap: wrap;
     background-color: white;
+    column-count: 3;
+    column-gap: 0px;
+    padding-bottom: 20px;
 }       
-.flex-container > a {
+.masonry > a {
+    width: 300px;
+    display: flex;
     text-align: center;
-    border-radius: 10px;
     overflow: hidden;
     background-color: #ffffff;
     margin: 10px;
     overflow-wrap: break-word;
     break-inside: avoid;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #aaaaaa;
 }
 a > div {
     break-inside: avoid;
@@ -86,6 +92,28 @@ p{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+@media only screen and (min-width: 1240px) {
+  .masonry {
+    column-count: 4;
+  }
+}
+
+@media only screen and (min-width: 930px) and (max-width: 1239px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+@media only screen and (min-width: 620px) and (max-width: 929px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 619px) {
+  .masonry {
+    column-count: 1;
+  }
 }
 </style>
 """)
