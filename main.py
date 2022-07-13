@@ -41,51 +41,51 @@ def write_css(f):
     f.write("""
 <style>
 img {
-max-height: 150px;     
-max-width: 150px;     
+    max-height: 150px;     
+    max-width: 150px;     
 }
 img.qr {
-height: 150px;     
-width: 150px;     
+    height: 150px;     
+    width: 150px;     
 }
 .flex-container {
-display: inline-flex;
-flex-wrap: wrap;
-background-color: white;
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-color: white;
 }       
 .flex-container > a {
-text-align: center;
-border-radius: 10px;
-overflow: hidden;
-background-color: #ffffff;
-margin: 10px;
-overflow-wrap: break-word;
-break-inside: avoid;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    margin: 10px;
+    overflow-wrap: break-word;
+    break-inside: avoid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 a > div {
-break-inside: avoid;
+    break-inside: avoid;
 }
 div > p {
-text-align: left;
+    text-align: left;
 }
 p{
-inline-size: 280px;
-margin: 2px 10px 2px 10px;
+    inline-size: 280px;
+    margin: 2px 10px 2px 10px;
 }
 .img-row {
-display: inline-flex;
-border-bottom: 1px solid #cfcfcf
+    display: inline-flex;
+    border-bottom: 1px solid #cfcfcf
 }
 .img-sizer {
-width: 150px;
-background: #eeeeee;
+    width: 150px;
+    background: #eeeeee;
 }
 .centered-element {
-  margin: 0;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+    margin: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 </style>
 """)
