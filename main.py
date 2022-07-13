@@ -51,7 +51,7 @@ width: 150px;
 .flex-container {
 display: inline-flex;
 flex-wrap: wrap;
-background-color: DodgerBlue;
+background-color: white;
 }       
 .flex-container > a {
 text-align: center;
@@ -60,7 +60,11 @@ overflow: hidden;
 background-color: #ffffff;
 margin: 10px;
 overflow-wrap: break-word;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+break-inside: avoid;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+a > div {
+break-inside: avoid;
 }
 div > p {
 text-align: left;
@@ -75,7 +79,13 @@ border-bottom: 1px solid #cfcfcf
 }
 .img-sizer {
 width: 150px;
-background: darkgrey;
+background: #eeeeee;
+}
+.centered-element {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 </style>
 """)
@@ -88,7 +98,7 @@ def write_single_item(f, items):
     <div>
         <div class="img-row">
             <div class="img-sizer">
-                <img src="{each[1]}"/> 
+                <img class="centered-element" src="{each[1]}"/> 
             </div>
             <img class="qr" src="{get_qr_output_file_name(index)}"/>
         </div>
