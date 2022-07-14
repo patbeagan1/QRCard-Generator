@@ -44,12 +44,12 @@ def write_css(f):
     f.write("""
 <style>
 img {
-    max-height: 150px;     
-    max-width: 150px;     
+    max-height: 1in;     
+    max-width: 1in;     
 }
 img.qr {
-    height: 150px;     
-    width: 150px;     
+    height: 1in;     
+    width: 1in;     
 }
 .masonry {
     display: inline-block;
@@ -60,7 +60,7 @@ img.qr {
     padding-bottom: 20px;
 }       
 .masonry > div > a {
-    width: 300px;
+    width: 2in;
     display: flex;
     text-align: center;
     overflow: hidden;
@@ -75,11 +75,15 @@ img.qr {
 div > a {
     break-inside: avoid;
 }
+a > div {
+    width: 2in;
+}
 div > p {
     text-align: left;
 }
 p {
-    inline-size: 280px;
+    font-size: 0.8em;
+    inline-size: 1.8in;
     margin: 2px 10px 2px 10px;
 }
 .img-row {
@@ -87,7 +91,7 @@ p {
     border-bottom: 1px solid #cfcfcf
 }
 .img-sizer {
-    width: 150px;
+    width: 1in;
     background: #eeeeee;
 }
 .centered-element {
@@ -96,27 +100,12 @@ p {
     top: 50%;
     transform: translateY(-50%);
 }
-@media only screen and (min-width: 1321px) {
-  .masonry {
-    column-count: 4;
-  }
-}
-@media only screen and (min-width: 981px) and (max-width: 1320px) {
-  .masonry {
-    column-count: 3;
-  }
-}
-@media only screen and (min-width: 641px) and (max-width: 980px) {
-  .masonry {
-    column-count: 2;
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 640px) {
-  .masonry {
-    column-count: 1;
-  }
-}
+@media only screen and (min-width: 8.401in) { .masonry { column-count: 4; } }
+@media only screen and (min-width: 6.378in) and (max-width: 8.400in) { .masonry { column-count: 3; } }
+@media only screen and (min-width: 4.251in) and (max-width: 6.377in) { .masonry { column-count: 2; } }
+@media only screen and (min-width: 0in) and (max-width: 4.25in) { .masonry { column-count: 1; } }
 .card-wrapper {
+    width: 2in;
     display: inline-block;
 }
 </style>
