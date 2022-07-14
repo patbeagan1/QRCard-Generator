@@ -35,7 +35,6 @@ def write_to_file(items):
         write_css(f)
         write_single_item(f, items)
         f.write("</div>")
-        f.write("""<div style="width: 8.5in; background: yellow">hello world</div>""")
         f.write("</body>")
         f.write("</html>")
 
@@ -56,19 +55,17 @@ img.qr {
     display: inline-block;
     flex-wrap: wrap;
     background-color: white;
-    column-count: 4;
-    column-gap: 0px;
+    display: flex;
+    flex-wrap: wrap;
     padding-bottom: 20px;
 }       
-.masonry > div > a {
+.card {
     width: 2in;
     display: flex;
     text-align: center;
     overflow: hidden;
     background-color: #ffffff;
-    margin: 8px;
     overflow-wrap: break-word;
-    break-inside: avoid;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     border: 1px solid #aaaaaa;
@@ -83,7 +80,7 @@ div > p {
     text-align: left;
 }
 p {
-    font-size: 0.8em;
+    font-size: 0.6em;
     inline-size: 1.8in;
     margin: 2px 10px 2px 10px;
 }
@@ -107,7 +104,7 @@ p {
 @media only screen and (min-width: 0in) and (max-width: 4.25in) { .masonry { column-count: 1; } }
 .card-wrapper {
     width: 2in;
-    display: inline-block;
+    margin: 0.05in;
 }
 </style>
 """)
@@ -117,7 +114,7 @@ def write_single_item(f, items):
     for index, each in enumerate(items):
         f.write(f"""
 <div class="card-wrapper">
-    <a href="{each[0]}">
+    <a class="card" href="{each[0]}">
         <div>
             <div class="img-row">
                 <div class="img-sizer">
