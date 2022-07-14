@@ -28,6 +28,6 @@ example.com, example.com/example.png
 
 You should end up with a responsive web page in `build/index.html`, which looks like this
 
-<img width="1291" alt="Screen Shot 2022-07-13 at 12 05 39 AM" src="https://user-images.githubusercontent.com/10187351/178654923-8f1ca000-7523-463a-a84f-bf8d616a79f4.png">
+<img width="1087" alt="Screen Shot 2022-07-13 at 10 22 23 PM" src="https://user-images.githubusercontent.com/10187351/178892193-c8d4f467-56e2-4555-a4f0-7058bb615c4b.png">
 
 If you'd like, you can print this page, to have a physical copy of your bookmarks.
