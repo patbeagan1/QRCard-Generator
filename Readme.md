@@ -10,7 +10,9 @@ If you are on macOs, you can run `brew install qrencode`.
 
 ## Usage
 
-You can run the script as `main.py <csv file>`. If you just want to quickly try out the script, you can do `main.py test.csv`
+You can run the script as `main.py <csv file>`. 
+
+If you just want to quickly try out the script, you can do `main.py test.csv`
 
 ### Formatting
 
