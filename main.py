@@ -52,6 +52,7 @@ img.qr {
     width: 1in;     
 }
 .masonry {
+    max-width: 8.4in;
     display: inline-block;
     flex-wrap: wrap;
     background-color: white;
